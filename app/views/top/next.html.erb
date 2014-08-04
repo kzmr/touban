@@ -1,0 +1,32 @@
+<div style="margin-top: 50px;">
+
+  <h2>当番変更</h2>
+
+    <% flash.each do |key, value| %>
+      <p style="color: red;"><%= value %></p>
+    <% end %>
+
+  <form name="form" action="" method="post">
+  正:
+  <select class="selectpicker" name="sei_id">
+    <% @member.each do |person| %>
+      <option value="<%= person.id %>"<%= person.id == @sei.id ? ' selected' : '' %>><%= person.name %></option>
+    <% end %>
+  </select>
+
+  <br />
+
+  副:
+  <select class="selectpicker" name="fuku_id">
+    <% @member.each do |person| %>
+      <option value="<%= person.id %>"<%= person.id == @fuku.id ? ' selected' : '' %>><%= person.name %></option>
+    <% end %>
+  </select>
+
+  <br />
+
+  <a href="javascript:void(0)" class="btn btn-primary" onclick="document.form.submit()">決定</a>
+
+  </form>
+
+</div>

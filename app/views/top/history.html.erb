@@ -1,0 +1,30 @@
+<div style="margin-top: 50px;">
+
+<h2>当番履歴</h2>
+
+<div class="row span7">
+<div class="span1"></div>
+<div class="span1">前回</div>
+<div class="span1">前々回</div>
+<div class="span1">3回前</div>
+<div class="span1">4回前</div>
+<div class="span1">5回前</div>
+</div>
+
+<div class="row span7">
+<% @member.each do |person| %>
+  <div class="span1"><%= person.name %></div>
+  <% person.history.each_char do |history| %>
+    <div class="span1">
+      <%
+        str = 'X'
+        str = '正' if history == 'a'
+        str = '副' if history == 'b'
+      %>
+      <%= str %>
+    </div>
+  <% end %>
+<% end %>
+</div>
+
+</div>
