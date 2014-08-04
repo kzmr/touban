@@ -12,8 +12,8 @@ class Tasks::ToubanTask
       _update
 
       UserMailer.general(
-        "dev@4travel.jp, creative@4travel.jp",
-        "kurai@4travel.jp",
+        "xxxx@xxxx.com",
+        "",
         "今週のプルリク当番のお知らせ",
         "
 今週のプルリク当番のお知らせです。
@@ -22,12 +22,6 @@ class Tasks::ToubanTask
 副: #{@rec_fuku.name}さん
 
 今週もはりきっていきましょう。
-
-履歴
-http://touban.4travel.jp/history
-
-見れない人はhostsに設定してね。
-192.168.111.133 dev1013 touban.4travel.jp
         "
       )
     end
