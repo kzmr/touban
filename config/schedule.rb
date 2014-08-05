@@ -21,6 +21,6 @@
 
 set :environment, :development
 
-every :tuesday, :at => '8am' do
+every :monday, :at => '8am' do
   runner "Tasks::ToubanTask.execute()"
 end
